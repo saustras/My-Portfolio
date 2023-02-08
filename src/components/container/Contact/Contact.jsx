@@ -4,7 +4,6 @@ import { contacts } from '../../../Data';
 import { socialIcons } from '../../../Data';
 import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
-import iziToast from 'izitoast';
 
 const Contact = () => {
   const frmContact = { email: '', name: '', lastname: '', phone: '', message: '' };
@@ -20,10 +19,10 @@ const Contact = () => {
 
     emailjs.send('service_hjt0gtr', 'template_bmppbin', contact, 'cNTiuRt_Rpjy1bZt-').then(
       (response) => {
-        console.log('SUCCESS!', response.status, response.text);
+        console.log('SUCCESS!', showMessage, response.status, response.text);
         setContact(frmContact);
         setShowMessage(true);
-        alert('se envio correctamente');
+        alert('se envio correctamente el mensaje');
       },
       (err) => {
         console.log('FAILED..', err);
