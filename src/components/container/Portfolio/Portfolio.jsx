@@ -69,7 +69,7 @@ const Portfolio = () => {
                 </motion.a>
 
                 <motion.a
-                  href={work.github}
+                  href={work.web}
                   whileInView={{ scale: [0, 1] }}
                   whileHover={{ scale: [1, 1.1] }}
                   transition={{ duration: 0.3 }}
