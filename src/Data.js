@@ -123,8 +123,8 @@ export const workImages = [
     img: admin,
     name: 'Administrador',
     category: 'angular',
-    github: 'angular',
-    web: 'angular',
+    github: 'https://github.com/saustras/front-angular-admin',
+    web: 'https://kacheslicores.up.railway.app',
   },
   {
     id: 2,
@@ -140,12 +140,12 @@ export const workImages = [
     name: 'eccomerce',
     category: 'angular',
     github: 'angular',
-    web: 'angular',
+    web: 'https://kacheslicoresecommerce.up.railway.app/',
   },
   {
     id: 4,
     img: restaurant,
-    name: 'Restaurant',
+    name: 'Restaurant React',
     category: 'React',
     github: 'https://github.com/saustras/Restaurant-react',
     web: 'angular',
@@ -153,21 +153,20 @@ export const workImages = [
   {
     id: 5,
     img: nodeEcommerce,
-    name: 'project 5',
+    name: 'nodeBackEcommerce',
     category: 'node',
-    github: 'angular',
+    github: 'https://github.com/saustras/back-Ecommerce-node',
     web: 'angular',
   },
   {
     id: 6,
     img: favorite,
-    name: 'project 6',
+    name: 'componente De favoritos',
     category: 'react',
     github: 'https://github.com/saustras/React-redux-ts-components-favorite',
     web: 'angular',
   },
 ];
-
 export const workNavs = ['All', 'React', 'Angular', 'PHP', 'Node'];
 
 export const contacts = [
