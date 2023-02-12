@@ -132,7 +132,7 @@ export const workImages = [
     name: 'encuesta',
     category: 'php',
     github: 'https://github.com/saustras/encuestas',
-    web: 'angular',
+    web: '',
   },
   {
     id: 3,
@@ -148,7 +148,7 @@ export const workImages = [
     name: 'Restaurant React',
     category: 'React',
     github: 'https://github.com/saustras/Restaurant-react',
-    web: 'angular',
+    web: 'https://restaurantreact.up.railway.app/home',
   },
   {
     id: 5,
@@ -156,7 +156,7 @@ export const workImages = [
     name: 'nodeBackEcommerce',
     category: 'node',
     github: 'https://github.com/saustras/back-Ecommerce-node',
-    web: 'angular',
+    web: '',
   },
   {
     id: 6,
@@ -164,7 +164,7 @@ export const workImages = [
     name: 'componente De favoritos',
     category: 'react',
     github: 'https://github.com/saustras/React-redux-ts-components-favorite',
-    web: 'angular',
+    web: '',
   },
 ];
 export const workNavs = ['All', 'React', 'Angular', 'PHP', 'Node'];
