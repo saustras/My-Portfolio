@@ -164,7 +164,7 @@ export const workImages = [
     name: 'componente De favoritos',
     category: 'react',
     github: 'https://github.com/saustras/React-redux-ts-components-favorite',
-    web: '',
+    web: 'https://favoritecomponent-production.up.railway.app/',
   },
 ];
 export const workNavs = ['All', 'React', 'Angular', 'PHP', 'Node'];
