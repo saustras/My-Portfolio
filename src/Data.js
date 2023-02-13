@@ -140,7 +140,7 @@ export const workImages = [
     name: 'eccomerce',
     category: 'angular',
     github: 'angular',
-    web: 'https://kacheslicoresecommerce.up.railway.app/registro',
+    web: 'https://kacheslicores.netlify.app/registro',
   },
   {
     id: 4,
