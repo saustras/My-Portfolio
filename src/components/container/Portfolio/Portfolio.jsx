@@ -58,15 +58,30 @@ const Portfolio = () => {
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
                 className="hoverLayer"
               >
-                <motion.a
-                  href={work.github}
-                  whileInView={{ scale: [0, 1] }}
-                  whileHover={{ scale: [1, 1.1] }}
-                  transition={{ duration: 0.3 }}
-                  target="_blank"
-                >
-                  <FiGithub />
-                </motion.a>
+                <div className="name">
+                  <p>{work.name}</p>
+                </div>
+                <div className="selected">
+                  <motion.a
+                    href={work.github}
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 1.1] }}
+                    transition={{ duration: 0.3 }}
+                    target="_blank"
+                  >
+                    <FiGithub />
+                  </motion.a>
+
+                  <motion.a
+                    href={work.web}
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 1.1] }}
+                    transition={{ duration: 0.3 }}
+                    target="_blank"
+                  >
+                    <FiEye />
+                  </motion.a>
+                </div>
 
                 <motion.a
                   href={work.web}
