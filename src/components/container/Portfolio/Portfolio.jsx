@@ -1,119 +1,146 @@
-import React, { useEffect, useState } from 'react';
-import './Portfolio.scss';
-import { workNavs } from '../../../Data';
-import { workImages } from '../../../Data';
-import { FiGithub, FiEye } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 
-const Portfolio = () => {
-  const [tab, setTab] = useState({ name: 'all' });
-  const [works, setWorks] = useState([]);
-  const [active, setActive] = useState(0);
+  @media screen and (max-width: 350px) {
+  }
+  button {
+    color: #000;
+    background: #fff;
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: none;
+    margin-top: 1rem;
+    font-family: 'Poppins';
 
-  useEffect(() => {
-    if (tab.name === 'all') {
-      setWorks(workImages);
-    } else {
-      const newWork = workImages.filter((workImage) => {
-        return workImage.category.toLowerCase() === tab.name;
-      });
-      setWorks(newWork);
+    &.active {
+      background: #8c12f0;
+      color: #fff;
     }
-  }, [tab]);
+  }
+}
 
-  const activeTab = (e, index) => {
-    setTab({ name: e.target.textContent.toLowerCase() });
-    setActive(index);
-  };
+.workImages {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 
-  return (
-    <div className="container" id="portfolio">
-      <motion.div initial={{ opacity: 0 }} whileInView={{ y: [-50, 0], opacity: 1 }} className="title">
-        <span>My Work</span>
-        <h1>Awesome Projects</h1>
-      </motion.div>
-      <motion.div initial={{ opacity: 0 }} whileInView={{ y: [-50, 0], opacity: 1 }} className="buttons">
-        {workNavs.map((workNav, index) => {
-          return (
-            <button onClick={(e) => activeTab(e, index)} className={`${active === index ? 'active' : ''}`} key={index}>
-              {workNav}
-            </button>
-          );
-        })}
-      </motion.div>
-      <motion.div
-        initial={{ x: 0, opacity: 0 }}
-        whileInView={{ x: [-250, 0], opacity: 1 }}
-        transition={{ duration: 1 }}
-        exit={{ opacity: 0, y: -50 }}
-        className="workImages"
-      >
-        {works.map((work) => {
-          return (
-            <div className="workImage" key={work.id}>
-              <img src={work.img} alt="workImg" />
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: [0, 1] }}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="hoverLayer"
-              >
-                <div className="name">
-                  <p>{work.name}</p>
-                </div>
-                <div className="selected">
-                  <motion.a
-                    href={work.github}
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 1.1] }}
-                    transition={{ duration: 0.3 }}
-                    target="_blank"
-                  >
-                    <FiGithub />
-                  </motion.a>
+  @media screen and(max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-                  <motion.a
-                    href={work.web}
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 1.1] }}
-                    transition={{ duration: 0.3 }}
-                    target="_blank"
-                  >
-                    <FiEye />
-                  </motion.a>
-                </div>
+  @media screen and(max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 
-                <motion.a
-                  href={work.web}
-                  whileInView={{ scale: [0, 1] }}
-                  whileHover={{ scale: [1, 1.1] }}
-                  transition={{ duration: 0.3 }}
-                  target="_blank"
-                >
-                  <FiEye />
-                </motion.a>
-              </motion.div>
-            </div>
-          );
-        })}
-      </motion.div>
-      <motion.div
-        initial={{ x: 0, opacity: 0 }}
-        whileInView={{ x: [250, 0], opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="talk"
-      >
-        <div className="talk_left">
-          <h3>
-            so let's talk about <br /> <span>your next projects</span>
-          </h3>
-        </div>
-        <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }} className="talk_right">
-          <a href="#contact">Contact Me</a>
-        </motion.div>
-      </motion.div>
-    </div>
-  );
-};
+  .workImage {
+    max-width: 380px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @media screen and(max-width:600px) {
+      max-width: 350px;
+    }
 
-export default Portfolio;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .hoverLayer {
+      background: #8c12f0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: flex-start;
+      .name {
+        position: absolute;
+        text-align: center;
+        margin-top: 17%;
+      }
+      .selected {
+        align-self: center;
+        display: flex;
+        :nth-child(2n) {
+          margin-left: 5px;
+        }
+      }
+      a {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        svg {
+          color: #fff;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.talk {
+  margin-top: 3rem;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .talk_left {
+    h3 {
+      font-size: 1.5rem;
+
+      span {
+        font-size: 3.5rem;
+        color: #8c12f0;
+
+        @media screen and (max-width: 599px) {
+          font-size: 2rem;
+        }
+
+        @media screen and (max-width: 360px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .talk_right {
+    align-self: flex-end;
+    margin-bottom: 1.5rem;
+    background: #8c12f0;
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: capitalize;
+    }
+  }
+}
