@@ -59,7 +59,7 @@ export const bios = [
     id: 2,
     icon: <FaPhoneAlt />,
     key: 'Phone',
-    value: '+(57)3145961181',
+    value: '(57)3145961181',
   },
   {
     id: 3,
@@ -114,7 +114,7 @@ export const experiences = [
     di: 2,
     year: '2020',
     position: 'Free lancer Web Developer',
-    company: 'shop.com.mm',
+    company: '',
   },
 ];
 export const workImages = [
@@ -132,7 +132,7 @@ export const workImages = [
     name: 'encuesta',
     category: 'php',
     github: 'https://github.com/saustras/encuestas',
-    web: '',
+    web: 'angular',
   },
   {
     id: 3,
@@ -140,31 +140,31 @@ export const workImages = [
     name: 'eccomerce',
     category: 'angular',
     github: 'angular',
-    web: 'https://kacheslicores.netlify.app/registro',
+    web: 'https://kacheslicoresecommerce.up.railway.app/',
   },
   {
     id: 4,
     img: restaurant,
-    name: 'Restaurant React',
+    name: 'Restaurant',
     category: 'React',
     github: 'https://github.com/saustras/Restaurant-react',
-    web: 'https://restaurantreact.up.railway.app/home',
+    web: 'angular',
   },
   {
     id: 5,
     img: nodeEcommerce,
-    name: 'nodeBackEcommerce',
+    name: 'project 5',
     category: 'node',
     github: 'https://github.com/saustras/back-Ecommerce-node',
-    web: '',
+    web: 'angular',
   },
   {
     id: 6,
     img: favorite,
-    name: 'componente De favoritos',
+    name: 'project 6',
     category: 'react',
     github: 'https://github.com/saustras/React-redux-ts-components-favorite',
-    web: 'https://favoritecomponent-production.up.railway.app/',
+    web: 'angular',
   },
 ];
 export const workNavs = ['All', 'React', 'Angular', 'PHP', 'Node'];
