@@ -106,12 +106,18 @@ export const icons = [
 export const experiences = [
   {
     id: 1,
-    year: '2022',
-    position: 'PHP Developer',
+    year: '2023',
+    position: 'Full stack developer',
+    company: 'UltraSys',
+  },
+  {
+    id: 2,
+    year: '2021-2022',
+    position: 'Full stack developer',
     company: 'Sisma Corporation',
   },
   {
-    di: 2,
+    di: 3,
     year: '2020',
     position: 'Free lancer Web Developer',
     company: '',
@@ -129,7 +135,7 @@ export const workImages = [
   {
     id: 2,
     img: encuesta,
-    name: 'encuesta',
+    name: 'Encuesta',
     category: 'php',
     github: 'https://github.com/saustras/encuestas',
     web: 'angular',
@@ -137,7 +143,7 @@ export const workImages = [
   {
     id: 3,
     img: eccomerce,
-    name: 'eccomerce',
+    name: 'Eccomerce',
     category: 'angular',
     github: 'angular',
     web: 'https://kacheslicoresecommerce.up.railway.app/',
@@ -153,7 +159,7 @@ export const workImages = [
   {
     id: 5,
     img: nodeEcommerce,
-    name: 'project 5',
+    name: 'Node Backend Ecommerce',
     category: 'node',
     github: 'https://github.com/saustras/back-Ecommerce-node',
     web: 'angular',
@@ -161,7 +167,7 @@ export const workImages = [
   {
     id: 6,
     img: favorite,
-    name: 'project 6',
+    name: 'Component Favoritos en React',
     category: 'react',
     github: 'https://github.com/saustras/React-redux-ts-components-favorite',
     web: 'angular',
